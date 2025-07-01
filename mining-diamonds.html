@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mining Diamonds</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="settings-include"></div>
+        <div data-include="partials/header.html"></div>
+        <div id="sidebar-btns">
+            <button id="nav-btn" class="sidebar-btn"><img class="svg" src="/images/icons/ie-hamburger.png" alt="Collapse Navigation"></button>
+            <button id="settings-btn" class="sidebar-btn"><img class="svg" src="/images/icons/ie-settings.png" alt="Settings"></button>
+        </div>
+        <div class="flex">
+            <div id="nav-include"></div>
+            <main>
+                <div style="position: relative; width: 100%; padding-top: 56.25%; border: none; outline: solid;">
+                    <iframe src="https://www.youtube.com/embed/AUBfJ8CW_nk"
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                    </iframe>
+                </div>
+                <div class="box" style="margin-top: 20px;">
+                    <p>Traverse caves to escape the clutches of greedy miners.</p>
+                    <p>Student Project</p>
+                    <p>Credits:
+                        <ul>
+                            <li>Dongyeon Kim</li>
+                            <li>Erika Kaczynski</li>
+                            <li>Ka Shuen Ho</li>
+                            <li>Taelyn May</li>
+                            <li>William Parker</li>
+                            <li>Yuze Su</li>
+                        </ul>
+                    </p>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+<script src="scripts/include.js"></script>
+<script type="module" src="scripts/settings.js"></script>
+<script type="module" src="scripts/theme.js"></script>
+<script type="module" src="scripts/collapse-nav.js"></script>
+
+</html>

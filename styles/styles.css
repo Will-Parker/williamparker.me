@@ -1,0 +1,296 @@
+:root {
+    --default-color: black;
+}
+
+/* fonts */
+@font-face {
+    font-family: Sitka;
+    src: url('../fonts/Sitka.ttc');
+}
+@font-face {
+    font-family: Sitka;
+    src: url('../fonts/SitkaB.ttc');
+    font-weight: bold;
+}
+@font-face {
+    font-family: Sitka;
+    src: url('../fonts/SitkaI.ttc');
+    font-style: italic;
+}
+@font-face {
+    font-family: Sitka;
+    src: url('../fonts/SitkaZ.ttc');
+    font-style: italic;
+    font-weight: bold;
+}
+@font-face {
+    font-family: 8bitoperator;
+    src: url('../fonts/8bitoperator.ttf');
+}
+@font-face {
+    font-family: VHS Gothic;
+    src: url('../fonts/vhs-gothic.ttf');
+}
+
+body {
+    font-family: 'VHS Gothic', sans-serif;
+    color: var(--default-color);
+    margin: 0;
+    background-color: black;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: black;
+    height: 150px;
+    font-size: 40px;
+}
+
+/* Nearest Neighbor Image Upscaling */
+img {
+    image-rendering: optimizeSpeed;
+    /* Firefox */
+    image-rendering: -moz-crisp-edges;
+    /* Opera */
+    image-rendering: -o-crisp-edges;
+    /* Chrome */
+    image-rendering: -webkit-optimize-contrast;
+    /* Universal support since 2021 */
+    image-rendering: pixelated;
+    /* CSS3 Proposed */
+    image-rendering: optimize-contrast;
+    /* IE8+ */
+    -ms-interpolation-mode: nearest-neighbor;
+}
+
+/* wraps entire website */
+#container {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* links */
+#container a {
+    color: var(--default-color);
+    font-weight: bold;
+}
+#container a:hover {
+    text-shadow: 0 0 5px var(--default-color);
+}
+
+/* flex */
+.flex {
+    display: flex;
+}
+aside {
+    width: 200px;
+    font-size: smaller;
+}
+main {
+    flex: 1;
+    padding: 20px;
+    order: 2;
+}
+#leftSidebar {
+    order: 1;
+}
+#rightSidebar {
+    order: 3;
+}
+
+/* navigation */
+#nav {
+    position: sticky;
+    top: 20px;
+    text-transform: uppercase;
+}
+#nav ul {
+    list-style: none;
+    margin-left: 0px;
+    padding-left: 1em;
+}
+#nav li {
+    padding-left: 1.5em;
+    text-indent: -1.5em;
+    padding-bottom: 0.5em;
+}
+#nav li:before {
+    content: ">";
+    padding-right: 0;
+}
+#nav a {
+    /* remove underline */
+    text-decoration: none;
+}
+#nav a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    text-align: center;
+}
+
+/* left & right alignment */
+.split {
+    display: flex;
+    justify-content: space-between;
+}
+.left-align {
+    text-align: left;
+}
+.right-align {
+    text-align: right;
+}
+
+/* table */
+td {
+    vertical-align: top;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* headers */
+main h1 {
+    font-size: 25px;
+}
+main h2 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+main h3 {
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* horizontal bar */
+hr {
+    color: var(--default-color);
+}
+
+/* individual bounding box for elements */
+.box {
+    border-style: solid;
+    padding: 1em;
+}
+.box+.box {
+    margin-top: 20px;
+}
+
+/* button */
+button {
+    border: var(--default-color);
+    border-style: solid;
+    background-color: black;
+    font-family: 'VHS Gothic', sans-serif;
+    color: var(--default-color);
+}
+button:hover {
+    background-color: var(--default-color);
+}
+
+/* sidebar buttons */
+#sidebar-btns {
+    position: sticky; 
+    top: 20px; 
+}
+.sidebar-btn {
+    position: absolute; 
+    left: 100%; 
+    margin: 10px;
+}
+#nav-btn {
+    top: 0px; 
+}
+#settings-btn {
+    top: 40px; 
+}
+
+/* settings */
+
+#settings {
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 9999; 
+    background-color: black; 
+    border-style: solid; 
+    padding: 1em;
+}
+
+.theme-toggle div {
+    width: 12px; 
+    height: 8px; 
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+/* unity player */
+#unity-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+}
+#unity-embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prevent-select {
+    /* Safari */
+    -webkit-user-select: none;
+    /* IE 10 and IE 11 */
+    -ms-user-select: none;
+    /* Standard syntax */
+    user-select: none;
+}
+
+/* MEDIA QUERY */
+
+/* TODO figure out mobile compatibility */
+
+@media only screen and (max-width: 800px) {
+    .flex {
+        flex-wrap: wrap;
+    }
+
+    aside {
+        width: 100%;
+    }
+
+    main {
+        order: 3;
+    }
+
+    #leftSidebar {
+        order: 1;
+    }
+
+    #rightSidebar {
+        order: 2;
+    }
+
+}

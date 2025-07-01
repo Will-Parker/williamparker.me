@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pit Boss</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="settings-include"></div>
+        <div data-include="partials/header.html"></div>
+        <div id="sidebar-btns">
+            <button id="nav-btn" class="sidebar-btn"><img class="svg" src="/images/icons/ie-hamburger.png" alt="Collapse Navigation"></button>
+            <button id="settings-btn" class="sidebar-btn"><img class="svg" src="/images/icons/ie-settings.png" alt="Settings"></button>
+        </div>
+        <div class="flex">
+            <div id="nav-include"></div>
+            <main>
+                <div id="unity-container" unity-src="https://itch.io/embed-upload/13780504?color=7fff00">
+                    <div id="unity-embed">
+                        <h1 class="prevent-select">CLICK TO LOAD GAME</h1>
+                    </div>
+                </div>
+                <div class="box" style="margin-top: 20px;">
+                    <p>There are only 5 minutes before the Casino goes under. Detain all the cheaters to save the Casino. But if you wrongfully detain someone, you'll have to pay them back for it, accelerating your bankruptcy.</p>
+                    <p>Credits:
+                        <ul>
+                            <li>Chloe Parker (Art)</li>
+                            <li>Joseph Bonitatibus (Programming)</li>
+                            <li>William Parker (Programming)</li>
+                        </ul>
+                    With Contributions from
+                        <ul style="list-style: none;">
+                            <li><a href="https://cazwolf.itch.io/pixel-fantasy-cards">"Pixel Fantasy Playing Cards"</a> by Caz</li>
+                            <li>"Funky Suspense" by Benjamin Tissot</li>
+                        </ul>
+                    </p>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+<script src="scripts/include.js"></script>
+<script type="module" src="scripts/settings.js"></script>
+<script type="module" src="scripts/theme.js"></script>
+<script type="module" src="scripts/collapse-nav.js"></script>
+<script src="scripts/unity-embed.js"></script>
+
+</html>

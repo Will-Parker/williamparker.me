@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>William Parker</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="settings-include"></div>
+        <div data-include="partials/header.html"></div>
+        <div id="sidebar-btns">
+            <button id="nav-btn" class="sidebar-btn"><img class="svg" src="/images/icons/ie-hamburger.png" alt="Collapse Navigation"></button>
+            <button id="settings-btn" class="sidebar-btn"><img class="svg" src="/images/icons/ie-settings.png" alt="Settings"></button>
+        </div>
+        <div class="flex">
+            <div id="nav-include"></div>
+            <main>
+                <div class="box">
+                    <h1>Welcome to my Website!</h1>
+                    <p>Hi! I'm William Parker, a Game Developer and Programmer.
+                        I've made several games in the Unity Game Engine.
+                        Currently, I'm making this website.</p>
+                    <p>Check out my past work <a href="/games.html">here</a>!</p>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+<script src="scripts/include.js"></script>
+<script type="module" src="scripts/settings.js"></script>
+<script type="module" src="scripts/theme.js"></script>
+<script type="module" src="scripts/collapse-nav.js"></script>
+
+</html>
