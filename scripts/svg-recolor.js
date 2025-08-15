@@ -1,5 +1,4 @@
 export function recolorSVG(svgElement, depth = 0) {
-    console.log(svgElement);
 
     // getComputedStyle(document.body).color -> string rgb(#, #, #)
     const strRGB = getComputedStyle(document.body).color;

@@ -240,13 +240,13 @@ button:hover {
     margin-right: 1px;
 }
 
-/* unity player */
-#unity-container {
+/* itch.io game player */
+#itch-container {
     position: relative;
     width: 100%;
     padding-top: 56.25%;
 }
-#unity-embed {
+#itch-embed {
     position: absolute;
     top: 0;
     left: 0;

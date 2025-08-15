@@ -1,31 +1,21 @@
-import { recolorSVG } from './svg-recolor.js';
+const itchContainer = document.getElementById('itch-container');
+const ogSrc = itchContainer.getAttribute('itch-src');
 
-export function setTheme(themeColor) {
-    document.documentElement.style.setProperty('--default-color', themeColor);
-    localStorage.setItem('theme', themeColor);
-
-    let itchEmbed = document.getElementById('itch-embed')
-    if (itchEmbed != null) {
-        if (itchEmbed.tagName.toLowerCase() == 'iframe') {
-            location.reload();
-        }
+itchContainer.addEventListener('click', function() {
+    const theme = localStorage.getItem('theme') || 'chartreuse';
+    const hexTheme = colourNameToHex(theme)
+    let newSrc = ogSrc
+    if (hexTheme) {
+        newSrc = ogSrc.replace(/(?<=\?color=)([0-9a-fA-F]{6})/, hexTheme.replace("#", ""))
     }
+    const iframe = document.createElement('iframe');
+    iframe.id = 'itch-embed';
+    iframe.src = newSrc;
+    iframe.allow = 'fullscreen';
 
-    let svgEls = document.getElementsByClassName('svg');
-    for (let svgEl of svgEls) {
-        recolorSVG(svgEl);
-    }
-}
-
-document.addEventListener("DOMContentLoaded", (event) => {
-    const savedTheme = localStorage.getItem('theme') || 'chartreuse';
-    document.documentElement.style.setProperty('--default-color', savedTheme);
-    let svgEls = document.getElementsByClassName('svg');
-    for (let svgEl of svgEls) {
-        recolorSVG(svgEl);
-    }
+    this.innerHTML = '';
+    this.appendChild(iframe);
 });
-
 
 // https://stackoverflow.com/questions/1573053/javascript-function-to-convert-color-names-to-hex-codes
 function colourNameToHex(colour)
