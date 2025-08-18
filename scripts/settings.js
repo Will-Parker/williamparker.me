@@ -16,7 +16,7 @@ const framerate = 60;  // fps
 
 function toggleSettings() {
     if (isSettingsInclude) {
-        const src = 'partials/settings.html';
+        const src = '/partials/settings.html';
         if (src) {
             fetch(src)
                 .then(response => {

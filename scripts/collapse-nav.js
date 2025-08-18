@@ -12,7 +12,7 @@ const framerate = 60;  // fps
 
 function toggleNav(isNavInclude) {
     if (isNavInclude) {
-        const src = 'partials/nav.html';
+        const src = '/partials/nav.html';
         if (src) {
             fetch(src)
                 .then(response => {
@@ -80,7 +80,7 @@ function navAnim(startFontSize, endFontSize, startWidth, endWidth) {
 document.addEventListener("DOMContentLoaded", (event) => {
     const isNavInclude = (localStorage.getItem('is-nav-include') || 'true') === 'true' ? true : false;
     if (isNavInclude) {
-        const src = 'partials/nav.html';
+        const src = '/partials/nav.html';
         if (src) {
             fetch(src)
                 .then(response => {

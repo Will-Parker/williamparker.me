@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BE KIND REWIND [DEMO]</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="settings-include"></div>
+        <div data-include="/partials/header.html"></div>
+        <div id="sidebar-btns">
+            <button id="nav-btn" class="sidebar-btn"><img class="svg" src="/images/icons/ie-hamburger.png" alt="Collapse Navigation"></button>
+            <button id="settings-btn" class="sidebar-btn"><img class="svg" src="/images/icons/ie-settings.png" alt="Settings"></button>
+        </div>
+        <div class="flex">
+            <div id="nav-include"></div>
+            <main>
+                <div class="box">
+                    <h1>BE KIND REWIND [DEMO]</h1>
+                </div>
+                <div id="itch-container" itch-src="https://itch.io/embed-upload/14639874?color=000000" style="margin-top: 20px; padding-top: 75%;">
+                    <div id="itch-embed">
+                        <h1 class="prevent-select">CLICK TO LOAD GAME</h1>
+                    </div>
+                </div>
+                <div class="box" style="margin-top: 20px;">
+                    <p>PLAY, PAUSE, & REWIND to reach the end of this puzzle platformer</p>
+                    <p>Created in 100 hours with the Godot Game Engine.</p>
+                    <p>Credits:
+                        <ul>
+                            <li>Joseph Bonitatibus (Programming, Art, Design)</li>
+                            <li>William Parker (Programming, Art, Design)</li>
+                        </ul>
+                    </p>
+                    <p>
+                        Additional Contributions:
+                        <ul>
+                            <li><a href="https://freesound.org/people/GowlerMusic/sounds/262267/">GowlerMusic</a> - Static SFX</li>
+                        </ul>
+                    </p>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+<script src="/scripts/include.js"></script>
+<script type="module" src="/scripts/settings.js"></script>
+<script type="module" src="/scripts/theme.js"></script>
+<script type="module" src="/scripts/collapse-nav.js"></script>
+<script src="/scripts/itch-embed.js"></script>
+
+</html>

@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fruits 'n Brutes</title>
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="/styles/styles.css">
 </head>
 
 <body>
     <div id="container">
         <div id="settings-include"></div>
-        <div data-include="partials/header.html"></div>
+        <div data-include="/partials/header.html"></div>
         <div id="sidebar-btns">
             <button id="nav-btn" class="sidebar-btn"><img class="svg" src="/images/icons/ie-hamburger.png" alt="Collapse Navigation"></button>
             <button id="settings-btn" class="sidebar-btn"><img class="svg" src="/images/icons/ie-settings.png" alt="Settings"></button>
@@ -19,7 +19,10 @@
         <div class="flex">
             <div id="nav-include"></div>
             <main>
-                <div id="itch-container" itch-src="https://itch.io/embed-upload/13789111?color=000000">
+                <div class="box">
+                    <h1>Fruits 'n Brutes</h1>
+                </div>
+                <div id="itch-container" itch-src="https://itch.io/embed-upload/13789111?color=000000" style="margin-top: 20px;">
                     <div id="itch-embed">
                         <h1 class="prevent-select">CLICK TO LOAD GAME</h1>
                     </div>
@@ -29,8 +32,8 @@
                     <p>Each turn, the player takes an action. After performing an action, the party order is rotated. After rotating, enemies will perform their action. Once all enemies are defeated, you can select two party members to have a dialogue. Selecting party members will strengthen their bond, increasing their stats when next to each other in the party lineup. During the dialogue, selecting the best dialogue option will strengthen their bond even further.</p>
                     <p>The logo, fruit sprites, mushroom sprites, and King Snail sprite were drawn by Chloe Parker and printed with a letterpress! And the voices of each character were voiced and synthesized by William Parker!</p>
                     <p>Images from the printmaking process:</p>
-                    <img style="border-style: solid; width: 100%;" src="images/fnb-printmaking1.jpg">
-                    <img style="border-style: solid; width: 100%; margin-top: 20px;" src="images/fnb-printmaking2.jpg">
+                    <img style="border-style: solid; width: 100%;" src="/images/fnb-printmaking1.jpg">
+                    <img style="border-style: solid; width: 100%; margin-top: 20px;" src="/images/fnb-printmaking2.jpg">
                     <p>Credits:
                         <ul>
                             <li>William Parker (Programming, Design, Audio, Dialogue)</li>
@@ -60,10 +63,10 @@
         </div>
     </div>
 </body>
-<script src="scripts/include.js"></script>
-<script type="module" src="scripts/settings.js"></script>
-<script type="module" src="scripts/theme.js"></script>
-<script type="module" src="scripts/collapse-nav.js"></script>
-<script src="scripts/itch-embed.js"></script>
+<script src="/scripts/include.js"></script>
+<script type="module" src="/scripts/settings.js"></script>
+<script type="module" src="/scripts/theme.js"></script>
+<script type="module" src="/scripts/collapse-nav.js"></script>
+<script src="/scripts/itch-embed.js"></script>
 
 </html>
